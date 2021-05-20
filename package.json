@@ -1,0 +1,28 @@
+{
+  "name": "agenda-mongodb",
+  "version": "1.0.0",
+  "description": "API de Agenda de contatos utilizando o Banco MongoDB. Com funcionalidade de cadastro e login de usuário.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon . --ignore public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allysonreeis/agenda-mongodb.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allysonreeis/agenda-mongodb/issues"
+  },
+  "homepage": "https://github.com/allysonreeis/agenda-mongodb#readme",
+  "keywords": [],
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
