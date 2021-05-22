@@ -5,7 +5,7 @@ const routes = require('./routes');
 const express = require('express');
 const app = express();
 
-// app.set('views', path.resolve(__dirname, 'views'));
+app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.resolve(__dirname, '..', 'public')));
 app.use(routes);

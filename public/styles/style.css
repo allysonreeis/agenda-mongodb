@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+  --color-background: rgb(241, 241, 241);
+  --color-rose-madder: #e71d36;
+  --color-portland-orange: #F46036;
+  --color-space-cadet: #2E294E;
+  --color-persian-green: #1B998B;
+  --color-june-bud: #C5D86D;
+  --color-title: #f3f3f3;
+}
+
+@media screen and (min-width: 320px) {
+  body {
+    background-color: var(--color-background);
+  }
+
+  header {
+    background-color: var(--color-rose-madder);
+    height: 250px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .ag-navbar {
+    height: 50px;
+    padding: 14px;
+  }
+  
+  .ag-navbar a {
+    font-weight: 700;
+    color: var(--color-title);
+    padding: 15px;
+  }
+
+  .ag-container h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--color-title);
+  }
+
+  .ag-card-contact {
+    width: 80%;
+    display: grid;
+    grid-template-columns: .5fr 1.5fr 1.5fr 2fr 2.5fr 1fr;
+    background-color: #FFF;
+    border-radius: 4px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 25px;
+    position: relative;
+    top: -20px;
+  }
+}
