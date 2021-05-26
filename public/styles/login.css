@@ -114,11 +114,11 @@
 }
 
 .overlay-animToRight {
-  animation: slideToLeft 1s ease-in-out forwards;
+  animation: slideToRight 1s ease-in-out forwards;
 }
 
 .overlay-animToLeft {
-  animation: slideToRight 1s ease-in-out forwards;
+  animation: slideToLeft 1s ease-in-out forwards;
 }
 
 .overlay {

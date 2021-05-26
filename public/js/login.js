@@ -7,8 +7,8 @@ let flag = true;
 overlay.addEventListener('click', e => {
 
   if (flag) {
-    overlay.classList.add('overlay-animToLeft');
-    overlay.classList.remove('overlay-animToRight');
+    overlay.classList.add('overlay-animToRight');
+    overlay.classList.remove('overlay-animToLeft');
     
     login.classList.add('formToLeft-in');
     login.classList.remove('formToLeft-out');
@@ -23,8 +23,8 @@ overlay.addEventListener('click', e => {
 
     flag = false;
   } else {
-    overlay.classList.add('overlay-animToRight');  
-    overlay.classList.remove('overlay-animToLeft');
+    overlay.classList.add('overlay-animToLeft');  
+    overlay.classList.remove('overlay-animToRight');
     
     login.classList.remove('formToLeft-in');
     login.classList.add('formToLeft-out');
