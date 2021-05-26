@@ -1,0 +1,183 @@
+@keyframes slideToRight {
+  0% {
+    left: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    left: 100%;
+    transform: translateX(-100%);
+    width: 35%;
+  }
+}
+
+@keyframes slideToLeft {
+  0% {
+    right: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    right: 100%;
+    transform: translateX(100%);
+    width: 35%;
+  }
+}
+
+@keyframes slideFormToLeft {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    padding-left: 500px;
+  }
+  49.9% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  50%{
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: visible;
+    padding-left: 50px;
+  }
+}
+
+@keyframes slideFormToRight {
+  0% {
+    opacity: 0;
+    padding-right: 500px;
+  }
+  49.9% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    padding-right: 50px;
+  }
+}
+
+@keyframes slideFormToLeft-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    padding-left: 50px;
+  }
+  49.9% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    visibility: visible;
+  }
+  60% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+    padding-left: 500px;
+  }
+}
+
+@keyframes slideFormToRight-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    padding-right: 50px;
+  }
+  49.9% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    visibility: visible;
+  }
+  60% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+    padding-right: 500px;
+  }
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.overlay-animToRight {
+  animation: slideToLeft 1s ease-in-out forwards;
+}
+
+.overlay-animToLeft {
+  animation: slideToRight 1s ease-in-out forwards;
+}
+
+.overlay {
+  width: 35%;
+  height: 100%;
+  position: absolute;
+  background-color: blueviolet;
+  z-index: 500;
+}
+
+.forms-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.login-container, .create-account-container {
+  position: absolute;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.login-container {
+  width: 50%;
+  display: none;
+  visibility: hidden;
+  left: 0;
+  padding-left: 500px;
+}
+
+.create-account-container {
+  width: 50%;
+  display: flex;
+  visibility: visible;
+  right: 0;
+  padding-right: 50px;
+}
+
+.login-form, .create-account-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formToLeft-in {
+  animation: slideFormToLeft .8s ease-in-out forwards;
+}
+
+.formToLeft-out {
+  animation: slideFormToLeft-out .8s ease-in-out forwards;;
+}
+
+.formToRight-in {
+  animation: slideFormToRight .8s ease-in-out forwards;
+}
+
+.formToRight-out {
+  animation: slideFormToRight-out .8s ease-in-out forwards;;
+
+}

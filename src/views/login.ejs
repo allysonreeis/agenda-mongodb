@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/login.css">
+</head>
+<body>
+  
+  <div class="container">
+    <div class="overlay"></div>
+    
+    <div class="forms-container">
+      
+      <div class="login-container">
+        <h2>Acesse sua conta</h2>
+        <ul>
+          <li><a href="#">facebook</a></li>
+          <li><a href="#">google</a></li>
+          <li><a href="#">linkedin</a></li>
+        </ul>
+
+        <p>ou entre usando seu e-mail</p>
+      
+        <form action="/login" method="post" class="login-form">
+          <input type="email" name="email" id="email" required>
+          <input type="password" name="password" id="password" required>
+          <button class="btn">Entrar</button>
+        </form>
+      </div>
+
+      <div class="create-account-container">
+        <h2>Crie sua conta</h2>
+        <ul>
+          <li><a href="#">facebook</a></li>
+          <li><a href="#">google</a></li>
+          <li><a href="#">linkedin</a></li>
+        </ul>
+
+        <p>ou cadastre-se usando seu e-mail</p>
+      
+        <form action="/login" method="post" class="create-account-form">
+          <input type="text" name="name" id="name" required>
+          <input type="email" name="email" id="email" required>
+          <input type="password" name="password" id="password" required>
+          <button class="btn">Cadastrar</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!--
+      
+      <div class="login-container first-column">
+        <h2>Que bom ver você por aqui!</h2>
+        <p>Entre com suas credênciais e veja seus contatos.</p>
+        <button class="signup-button btn">Criar conta</button>
+      </div>
+      
+      <div class="first-column create-account-container">
+        <h2>Olá, estamos ansiosos por seu cadastro.</h2>
+        <p>Preencha seus dados e seja bem-vindo!</p>
+        <button>Cadastre-se</button>
+      </div>
+    </div> -->
+
+  </div> <!-- end container -->
+
+<script src="/js/login.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
