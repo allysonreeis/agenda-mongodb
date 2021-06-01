@@ -6,71 +6,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
 
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/style.css">
   <link rel="stylesheet" href="/styles/login.css">
 </head>
 <body>
   
-  <div class="container">
-    <div class="overlay"></div>
-    
-    <div class="forms-container">
-      
-      <div class="login-container">
-        <h2>Acesse sua conta</h2>
-        <ul>
-          <li><a href="#">facebook</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">linkedin</a></li>
-        </ul>
-
-        <p>ou entre usando seu e-mail</p>
-      
-        <form action="/login" method="post" class="login-form">
-          <input type="email" name="email" id="email" required>
-          <input type="password" name="password" id="password" required>
-          <button class="btn">Entrar</button>
-        </form>
-      </div>
-
-      <div class="create-account-container">
-        <h2>Crie sua conta</h2>
-        <ul>
-          <li><a href="#">facebook</a></li>
-          <li><a href="#">google</a></li>
-          <li><a href="#">linkedin</a></li>
-        </ul>
-
-        <p>ou cadastre-se usando seu e-mail</p>
-      
-        <form action="/login" method="post" class="create-account-form">
-          <input type="text" name="name" id="name" required>
-          <input type="email" name="email" id="email" required>
-          <input type="password" name="password" id="password" required>
-          <button class="btn">Cadastrar</button>
-        </form>
-      </div>
-
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h1>Criar Conta</h1>
+        <div class="social-container">
+          <a href="#" class="social">
+            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9Ijk2LjEyNHB4IiBoZWlnaHQ9Ijk2LjEyM3B4IiB2aWV3Qm94PSIwIDAgOTYuMTI0IDk2LjEyMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgOTYuMTI0IDk2LjEyMzsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTcyLjA4OSwwLjAyTDU5LjYyNCwwQzQ1LjYyLDAsMzYuNTcsOS4yODUsMzYuNTcsMjMuNjU2djEwLjkwN0gyNC4wMzdjLTEuMDgzLDAtMS45NiwwLjg3OC0xLjk2LDEuOTYxdjE1LjgwMw0KCQljMCwxLjA4MywwLjg3OCwxLjk2LDEuOTYsMS45NmgxMi41MzN2MzkuODc2YzAsMS4wODMsMC44NzcsMS45NiwxLjk2LDEuOTZoMTYuMzUyYzEuMDgzLDAsMS45Ni0wLjg3OCwxLjk2LTEuOTZWNTQuMjg3aDE0LjY1NA0KCQljMS4wODMsMCwxLjk2LTAuODc3LDEuOTYtMS45NmwwLjAwNi0xNS44MDNjMC0wLjUyLTAuMjA3LTEuMDE4LTAuNTc0LTEuMzg2Yy0wLjM2Ny0wLjM2OC0wLjg2Ny0wLjU3NS0xLjM4Ny0wLjU3NUg1Ni44NDJ2LTkuMjQ2DQoJCWMwLTQuNDQ0LDEuMDU5LTYuNyw2Ljg0OC02LjdsOC4zOTctMC4wMDNjMS4wODIsMCwxLjk1OS0wLjg3OCwxLjk1OS0xLjk2VjEuOThDNzQuMDQ2LDAuODk5LDczLjE3LDAuMDIyLDcyLjA4OSwwLjAyeiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" />
+          </a>
+          <a href="#" class="social">
+            <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIC05MSA1MTIgNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xNjYgNjBjMzQuNjY3OTY5IDAgNjYuMDI3MzQ0IDE3Ljc4OTA2MiA4NCA0Mi4zMDA3ODFsNDIuNTk3NjU2LTQyLjkwMjM0M2MtMjUuNDc2NTYyLTMzLjEyODkwNy03NC41MTE3MTgtNTkuMzk4NDM4LTEyNi41OTc2NTYtNTkuMzk4NDM4LTkxLjE5OTIxOSAwLTE2NiA3My44MDA3ODEtMTY2IDE2NXM3NC44MDA3ODEgMTY1IDE2NiAxNjVjNzUuNjAxNTYyIDAgMTM5LjE5OTIxOS01MC42OTkyMTkgMTU4LjY5OTIxOS0xMjAgNC4xOTkyMTktMTQuNDAyMzQ0IDYuMzAwNzgxLTI5LjQwMjM0NCA2LjMwMDc4MS00NXYtMTVoLTE1MHY1OS45ODgyODFoNzkuNWMtMTYuNSAzNS40MDIzNDQtNTIuODAwNzgxIDYwLjAxMTcxOS05NC41IDYwLjAxMTcxOS01Ny44OTg0MzggMC0xMDYtNDcuMTAxNTYyLTEwNi0xMDVzNDguMTAxNTYyLTEwNSAxMDYtMTA1em0wIDAiLz48cGF0aCBkPSJtNDY2IDkwaC02MHY0NWgtNDV2NjBoNDV2NDVoNjB2LTQ1aDQ2di02MGgtNDZ6bTAgMCIvPjwvc3ZnPg==" />
+          </a>
+          <a href="#" class="social">
+            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjEuOTAzIDIxLjkwMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjEuOTAzIDIxLjkwMzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0yLjY3LDEuMjExYzAuNjgyLDAsMS4yMTYsMC4yMTUsMS42MDQsMC42NDNTNC44NywyLjgyMiw0Ljg5OCwzLjQ2OQ0KCQljMCwwLjYzOS0wLjIxOCwxLjE3OC0wLjY1NywxLjYxNkMzLjgwMiw1LjUyMiwzLjIwMiw1Ljc0MSwyLjQ0Myw1Ljc0MUgyLjQxNmMtMC43NDEsMC0xLjMyOC0wLjIxOS0xLjc2NS0wLjY1Ng0KCQlDMC4yMTksNC42NDcsMCw0LjEwOCwwLDMuNDY5YzAtMC42NTcsMC4yMzgtMS4xOTcsMC43MTgtMS42MjJDMS4xOTgsMS40MjMsMS44NSwxLjIxMSwyLjY3LDEuMjExeiBNMC4yODcsNy41MzVINC45N3YxMy4xNTZIMC4yODcNCgkJVjcuNTM1eiBNMjEuOTAzLDEzLjE0OHY3LjU0M2gtNC42ODJ2LTcuMDM2YzAtMC44OTUtMC4xODQtMS42MTItMC41NS0yLjE1OGMtMC4zNjQtMC41NDEtMC45NzMtMC44MTItMS44MzMtMC44MTINCgkJYy0wLjY1NSwwLTEuMTgxLDAuMTY2LTEuNTczLDAuNWMtMC4zOTMsMC4zMzItMC42NzgsMC42OTktMC44NSwxLjEwMmMtMC4wNTYsMC4xNDYtMC4wOTEsMC4zMDctMC4xMSwwLjQ4Ng0KCQljLTAuMDE4LDAuMTc2LTAuMDI2LDAuMzY3LTAuMDI2LDAuNTY4djcuMzUxSDcuNTY4YzAuMDItMi4yMjYsMC4wMzEtNC4yNjgsMC4wMzEtNi4xMnYtMi4zMzl2LTIuMTI1DQoJCWMwLTAuNjQ3LTAuMDA3LTEuMTk5LTAuMDE4LTEuNjU3QzcuNTc1LDcuOTk3LDcuNTY4LDcuNjksNy41NjgsNy41MzVoNC43MTF2MS44NjNsLTAuMDI2LDAuMDU0aDAuMDI2VjkuMzk4DQoJCWMwLjE0Ni0wLjIyOSwwLjMzMy0wLjQ2OCwwLjU2MS0wLjcxOWMwLjIzMS0wLjI1LDAuNTA3LTAuNDg0LDAuODQzLTAuN2MwLjMzMy0wLjIxNCwwLjczNC0wLjM5LDEuMjA0LTAuNTMzDQoJCWMwLjQ3My0wLjE0MSwxLjAxMS0wLjIxMSwxLjYyNC0wLjIxMWMwLjc2MiwwLDEuNDc0LDAuMTE2LDIuMTM4LDAuMzQ5YzAuNjYyLDAuMjMzLDEuMjMxLDAuNTk4LDEuNzE1LDEuMDk2DQoJCWMwLjQ4MSwwLjQ5NSwwLjg1OCwxLjExMSwxLjEzMiwxLjg0N0MyMS43NjksMTEuMjYxLDIxLjkwMywxMi4xMzUsMjEuOTAzLDEzLjE0OHoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
+          </a>
+        </div>
+        <span>ou use seu email para cadastrar-se</span>
+        <input type="text" placeholder="Nome" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Senha" />
+        <button>Cadastrar</button>
+      </form>
     </div>
-
-    <!--
-      
-      <div class="login-container first-column">
-        <h2>Que bom ver você por aqui!</h2>
-        <p>Entre com suas credênciais e veja seus contatos.</p>
-        <button class="signup-button btn">Criar conta</button>
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Fazer Login</h1>
+        <div class="social-container">
+          <a href="#" class="social">
+            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9Ijk2LjEyNHB4IiBoZWlnaHQ9Ijk2LjEyM3B4IiB2aWV3Qm94PSIwIDAgOTYuMTI0IDk2LjEyMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgOTYuMTI0IDk2LjEyMzsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTcyLjA4OSwwLjAyTDU5LjYyNCwwQzQ1LjYyLDAsMzYuNTcsOS4yODUsMzYuNTcsMjMuNjU2djEwLjkwN0gyNC4wMzdjLTEuMDgzLDAtMS45NiwwLjg3OC0xLjk2LDEuOTYxdjE1LjgwMw0KCQljMCwxLjA4MywwLjg3OCwxLjk2LDEuOTYsMS45NmgxMi41MzN2MzkuODc2YzAsMS4wODMsMC44NzcsMS45NiwxLjk2LDEuOTZoMTYuMzUyYzEuMDgzLDAsMS45Ni0wLjg3OCwxLjk2LTEuOTZWNTQuMjg3aDE0LjY1NA0KCQljMS4wODMsMCwxLjk2LTAuODc3LDEuOTYtMS45NmwwLjAwNi0xNS44MDNjMC0wLjUyLTAuMjA3LTEuMDE4LTAuNTc0LTEuMzg2Yy0wLjM2Ny0wLjM2OC0wLjg2Ny0wLjU3NS0xLjM4Ny0wLjU3NUg1Ni44NDJ2LTkuMjQ2DQoJCWMwLTQuNDQ0LDEuMDU5LTYuNyw2Ljg0OC02LjdsOC4zOTctMC4wMDNjMS4wODIsMCwxLjk1OS0wLjg3OCwxLjk1OS0xLjk2VjEuOThDNzQuMDQ2LDAuODk5LDczLjE3LDAuMDIyLDcyLjA4OSwwLjAyeiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" />
+          </a>
+          <a href="#" class="social">
+            <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIC05MSA1MTIgNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xNjYgNjBjMzQuNjY3OTY5IDAgNjYuMDI3MzQ0IDE3Ljc4OTA2MiA4NCA0Mi4zMDA3ODFsNDIuNTk3NjU2LTQyLjkwMjM0M2MtMjUuNDc2NTYyLTMzLjEyODkwNy03NC41MTE3MTgtNTkuMzk4NDM4LTEyNi41OTc2NTYtNTkuMzk4NDM4LTkxLjE5OTIxOSAwLTE2NiA3My44MDA3ODEtMTY2IDE2NXM3NC44MDA3ODEgMTY1IDE2NiAxNjVjNzUuNjAxNTYyIDAgMTM5LjE5OTIxOS01MC42OTkyMTkgMTU4LjY5OTIxOS0xMjAgNC4xOTkyMTktMTQuNDAyMzQ0IDYuMzAwNzgxLTI5LjQwMjM0NCA2LjMwMDc4MS00NXYtMTVoLTE1MHY1OS45ODgyODFoNzkuNWMtMTYuNSAzNS40MDIzNDQtNTIuODAwNzgxIDYwLjAxMTcxOS05NC41IDYwLjAxMTcxOS01Ny44OTg0MzggMC0xMDYtNDcuMTAxNTYyLTEwNi0xMDVzNDguMTAxNTYyLTEwNSAxMDYtMTA1em0wIDAiLz48cGF0aCBkPSJtNDY2IDkwaC02MHY0NWgtNDV2NjBoNDV2NDVoNjB2LTQ1aDQ2di02MGgtNDZ6bTAgMCIvPjwvc3ZnPg==" />
+          </a>
+          <a href="#" class="social">
+            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjEuOTAzIDIxLjkwMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjEuOTAzIDIxLjkwMzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0yLjY3LDEuMjExYzAuNjgyLDAsMS4yMTYsMC4yMTUsMS42MDQsMC42NDNTNC44NywyLjgyMiw0Ljg5OCwzLjQ2OQ0KCQljMCwwLjYzOS0wLjIxOCwxLjE3OC0wLjY1NywxLjYxNkMzLjgwMiw1LjUyMiwzLjIwMiw1Ljc0MSwyLjQ0Myw1Ljc0MUgyLjQxNmMtMC43NDEsMC0xLjMyOC0wLjIxOS0xLjc2NS0wLjY1Ng0KCQlDMC4yMTksNC42NDcsMCw0LjEwOCwwLDMuNDY5YzAtMC42NTcsMC4yMzgtMS4xOTcsMC43MTgtMS42MjJDMS4xOTgsMS40MjMsMS44NSwxLjIxMSwyLjY3LDEuMjExeiBNMC4yODcsNy41MzVINC45N3YxMy4xNTZIMC4yODcNCgkJVjcuNTM1eiBNMjEuOTAzLDEzLjE0OHY3LjU0M2gtNC42ODJ2LTcuMDM2YzAtMC44OTUtMC4xODQtMS42MTItMC41NS0yLjE1OGMtMC4zNjQtMC41NDEtMC45NzMtMC44MTItMS44MzMtMC44MTINCgkJYy0wLjY1NSwwLTEuMTgxLDAuMTY2LTEuNTczLDAuNWMtMC4zOTMsMC4zMzItMC42NzgsMC42OTktMC44NSwxLjEwMmMtMC4wNTYsMC4xNDYtMC4wOTEsMC4zMDctMC4xMSwwLjQ4Ng0KCQljLTAuMDE4LDAuMTc2LTAuMDI2LDAuMzY3LTAuMDI2LDAuNTY4djcuMzUxSDcuNTY4YzAuMDItMi4yMjYsMC4wMzEtNC4yNjgsMC4wMzEtNi4xMnYtMi4zMzl2LTIuMTI1DQoJCWMwLTAuNjQ3LTAuMDA3LTEuMTk5LTAuMDE4LTEuNjU3QzcuNTc1LDcuOTk3LDcuNTY4LDcuNjksNy41NjgsNy41MzVoNC43MTF2MS44NjNsLTAuMDI2LDAuMDU0aDAuMDI2VjkuMzk4DQoJCWMwLjE0Ni0wLjIyOSwwLjMzMy0wLjQ2OCwwLjU2MS0wLjcxOWMwLjIzMS0wLjI1LDAuNTA3LTAuNDg0LDAuODQzLTAuN2MwLjMzMy0wLjIxNCwwLjczNC0wLjM5LDEuMjA0LTAuNTMzDQoJCWMwLjQ3My0wLjE0MSwxLjAxMS0wLjIxMSwxLjYyNC0wLjIxMWMwLjc2MiwwLDEuNDc0LDAuMTE2LDIuMTM4LDAuMzQ5YzAuNjYyLDAuMjMzLDEuMjMxLDAuNTk4LDEuNzE1LDEuMDk2DQoJCWMwLjQ4MSwwLjQ5NSwwLjg1OCwxLjExMSwxLjEzMiwxLjg0N0MyMS43NjksMTEuMjYxLDIxLjkwMywxMi4xMzUsMjEuOTAzLDEzLjE0OHoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
+          </a>
+        </div>
+        <span>ou use sua conta de email</span>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Senha" />
+        <button>Entrar</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Bem vindo de volta!</h1>
+          <p>Para se manter conectado, por favor entre com suas informações de login</p>
+          <button class="ghost" id="signIn">Login</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Olá, Amigo(a)!</h1>
+          <p>Entre com suas informações e faça parte do nosso grupo</p>
+          <button class="ghost" id="signUp">Cadastrar</button>
+        </div>
       </div>
-      
-      <div class="first-column create-account-container">
-        <h2>Olá, estamos ansiosos por seu cadastro.</h2>
-        <p>Preencha seus dados e seja bem-vindo!</p>
-        <button>Cadastre-se</button>
-      </div>
-    </div> -->
-
-  </div> <!-- end container -->
-
+    </div>
+  </div>
+  
 <script src="/js/login.js"></script>
-<script src="/js/main.js"></script>
 </body>
 </html>
