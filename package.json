@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon . --ignore public"
+    "start": "nodemon . --ignore public",
+    "dev": "webpack -w"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,14 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.13.1",
+    "nodemon": "^2.0.7",
+    "regenerator-runtime": "^0.13.7",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
   }
 }
