@@ -17,7 +17,7 @@
   
   <div class="container" id="container">
     <div class="form-container sign-up-container">
-      <form action="#">
+      <form action="/login/register" method="POST">
 
         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
 
@@ -33,15 +33,37 @@
             <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjEuOTAzIDIxLjkwMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjEuOTAzIDIxLjkwMzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggc3R5bGU9ImZpbGw6IzAzMDEwNDsiIGQ9Ik0yLjY3LDEuMjExYzAuNjgyLDAsMS4yMTYsMC4yMTUsMS42MDQsMC42NDNTNC44NywyLjgyMiw0Ljg5OCwzLjQ2OQ0KCQljMCwwLjYzOS0wLjIxOCwxLjE3OC0wLjY1NywxLjYxNkMzLjgwMiw1LjUyMiwzLjIwMiw1Ljc0MSwyLjQ0Myw1Ljc0MUgyLjQxNmMtMC43NDEsMC0xLjMyOC0wLjIxOS0xLjc2NS0wLjY1Ng0KCQlDMC4yMTksNC42NDcsMCw0LjEwOCwwLDMuNDY5YzAtMC42NTcsMC4yMzgtMS4xOTcsMC43MTgtMS42MjJDMS4xOTgsMS40MjMsMS44NSwxLjIxMSwyLjY3LDEuMjExeiBNMC4yODcsNy41MzVINC45N3YxMy4xNTZIMC4yODcNCgkJVjcuNTM1eiBNMjEuOTAzLDEzLjE0OHY3LjU0M2gtNC42ODJ2LTcuMDM2YzAtMC44OTUtMC4xODQtMS42MTItMC41NS0yLjE1OGMtMC4zNjQtMC41NDEtMC45NzMtMC44MTItMS44MzMtMC44MTINCgkJYy0wLjY1NSwwLTEuMTgxLDAuMTY2LTEuNTczLDAuNWMtMC4zOTMsMC4zMzItMC42NzgsMC42OTktMC44NSwxLjEwMmMtMC4wNTYsMC4xNDYtMC4wOTEsMC4zMDctMC4xMSwwLjQ4Ng0KCQljLTAuMDE4LDAuMTc2LTAuMDI2LDAuMzY3LTAuMDI2LDAuNTY4djcuMzUxSDcuNTY4YzAuMDItMi4yMjYsMC4wMzEtNC4yNjgsMC4wMzEtNi4xMnYtMi4zMzl2LTIuMTI1DQoJCWMwLTAuNjQ3LTAuMDA3LTEuMTk5LTAuMDE4LTEuNjU3QzcuNTc1LDcuOTk3LDcuNTY4LDcuNjksNy41NjgsNy41MzVoNC43MTF2MS44NjNsLTAuMDI2LDAuMDU0aDAuMDI2VjkuMzk4DQoJCWMwLjE0Ni0wLjIyOSwwLjMzMy0wLjQ2OCwwLjU2MS0wLjcxOWMwLjIzMS0wLjI1LDAuNTA3LTAuNDg0LDAuODQzLTAuN2MwLjMzMy0wLjIxNCwwLjczNC0wLjM5LDEuMjA0LTAuNTMzDQoJCWMwLjQ3My0wLjE0MSwxLjAxMS0wLjIxMSwxLjYyNC0wLjIxMWMwLjc2MiwwLDEuNDc0LDAuMTE2LDIuMTM4LDAuMzQ5YzAuNjYyLDAuMjMzLDEuMjMxLDAuNTk4LDEuNzE1LDEuMDk2DQoJCWMwLjQ4MSwwLjQ5NSwwLjg1OCwxLjExMSwxLjEzMiwxLjg0N0MyMS43NjksMTEuMjYxLDIxLjkwMywxMi4xMzUsMjEuOTAzLDEzLjE0OHoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
           </a>
         </div>
+
+        <div class="flash-container">
+          <% if (errors.length > 0) { %>
+            <div class="error-messages">
+              <% errors.forEach(error => { %>
+                <%= error %><br> 
+              <% }); %> 
+            </div>
+          <% } %>
+
+          <% if (success.length > 0) { %>
+            <div class="success-messages">
+              <% success.forEach(success => { %>
+                <%= success %><br> 
+              <% }); %> 
+            </div>
+          <% } %>
+        </div>
+
         <span>ou use seu email para cadastrar-se</span>
-        <input type="text" placeholder="Nome" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Senha" />
+        <input type="text" placeholder="Nome" name="name" required/>
+        <input type="email" placeholder="Email" name="email" required/>
+        <input type="password" placeholder="Senha" name="password" required/>
         <button>Cadastrar</button>
       </form>
     </div>
     <div class="form-container sign-in-container">
-      <form action="#">
+      <form action="/login/login" method="POST">
+
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
         <h1>Fazer Login</h1>
         <div class="social-container">
           <a href="#" class="social">
@@ -55,8 +77,8 @@
           </a>
         </div>
         <span>ou use sua conta de email</span>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Senha" />
+        <input type="email" placeholder="Email" name="email" required/>
+        <input type="password" placeholder="Senha" name="password" required/>
         <button>Entrar</button>
       </form>
     </div>

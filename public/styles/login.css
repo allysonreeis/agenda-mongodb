@@ -225,3 +225,13 @@ input {
   height: auto;
   padding: 10px;
 }
+
+.error-messages {
+	background-color: rgb(238, 160, 160);
+	color: #fff;
+}
+
+.success-messages {
+	background-color: aquamarine;
+	color: #fff;
+}

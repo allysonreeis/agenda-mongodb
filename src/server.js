@@ -7,7 +7,7 @@ const path = require('path');
 const routes = require('./routes');
 const express = require('express');
 const app = express();
-const { checkCsrfToken, csrfMiddleware } = require('./middlewares/middleware');
+const { globalMiddleware, checkCsrfToken, csrfMiddleware } = require('./middlewares/middleware');
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.CONNECTIONSTRING, 
@@ -44,7 +44,7 @@ const sessionOptions = session({
 });
 app.use(sessionOptions);
 app.use(flashMessages());
-
+app.use(globalMiddleware);
 app.use(csrf());
 app.use(checkCsrfToken);
 app.use(csrfMiddleware);
