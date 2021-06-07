@@ -18,6 +18,9 @@
   <div class="container" id="container">
     <div class="form-container sign-up-container">
       <form action="#">
+
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
         <h1>Criar Conta</h1>
         <div class="social-container">
           <a href="#" class="social">
