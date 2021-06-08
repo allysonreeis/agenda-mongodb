@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  
+  <header>
+    
+    <nav class="ag-navbar">
+      <div class="ag-nav-home"><a href="/">Logo</a></div>
+      
+      <a href="#">Agenda</a>
+
+      <% if(user) { %> 
+      <a href="/login/logout">Sair</a>
+      <% } else { %>
+      <a href="/login">Entrar</a>
+      <% } %>  
+    </nav>
+
+    <section class="ag-section">
+      <div class="ag-container">
+        <h1>Cadastrar Contato</h1>
+        
+        <div class="flash-container">
+          <% if (errors.length > 0) { %>
+            <div class="error-messages">
+              <% errors.forEach(error => { %>
+                <%= error %><br> 
+              <% }); %> 
+            </div>
+          <% } %>
+
+          <% if (success.length > 0) { %>
+            <div class="success-messages">
+              <% success.forEach(success => { %>
+                <%= success %><br> 
+              <% }); %> 
+            </div>
+          <% } %>
+        </div>
+        
+      </div>
+    </section>
+  
+  </header>
+  
+  <div class="ag-container">
+    <div class="ag-cards">
+      <form action="/contato/register" method="POST">
+
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+        <input value="<%= userContact.name %>" type="text" name="name" placeholder="Nome">
+        <input value="<%= userContact.lastname %>" type="text" name="lastname" placeholder="Sobrenome">
+        <input value="<%= userContact.email %>" type="email" name="email" placeholder="E-mail">
+        <input value="<%= userContact.phone %>" type="tel" name="phone" placeholder="Telefone">
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
+
+  </div>
+  
+</body>
+</html>
