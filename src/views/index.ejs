@@ -19,7 +19,12 @@
       <div class="ag-nav-home"><a href="/">Logo</a></div>
       
       <a href="#">Agenda</a>
+
+      <% if(user) { %> 
+      <a href="/login/logout">Sair</a>
+      <% } else { %>
       <a href="/login">Entrar</a>
+      <% } %>  
     </nav>
 
     <section class="ag-section">
