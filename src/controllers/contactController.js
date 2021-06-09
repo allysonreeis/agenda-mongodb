@@ -31,3 +31,26 @@ exports.editContact = async (req, res) => {
   if(!userContact) return res.render('404');
   res.render('contact', { userContact });
 };
+
+exports.edit = async (req, res) => {
+  try {
+    if(!req.params.id) return res.render('404');
+
+    const contact = new Contact(req.body);
+    await contact.edit(req.params.id);
+
+    if (contact.errors.length > 0) {
+      req.flash('errors', contact.errors);
+      req.session.save(()=>{
+        res.redirect('back');
+      });
+      return;
+    }
+    req.flash('success', 'Contato editado com sucesso!');
+    req.session.save(()=> res.redirect(`/contato/${contact.contact._id}`));
+    return;
+  } catch (error) {
+    console.log(error);
+    return res.render('404');
+  }
+};

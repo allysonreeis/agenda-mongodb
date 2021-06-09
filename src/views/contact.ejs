@@ -57,7 +57,12 @@
   
   <div class="ag-container">
     <div class="ag-cards">
-      <form action="/contato/register" method="POST">
+
+      <% if(userContact._id) { %>
+        <form action="/contato/edit/<%= userContact._id %>" method="POST">
+      <% } else { %>
+        <form action="/contato/register" method="POST">
+      <% } %>   
 
         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
 
