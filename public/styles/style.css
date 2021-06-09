@@ -73,6 +73,22 @@ li {
     position: relative;
     top: -20px;
   }
+
+  .ag-card-contact a {
+    display: inline-flex;
+  }
+
+  .edit-icon, .delete-icon {
+    margin: 0 20px;
+  }
+
+  .edit-icon {
+    color: #333;
+  }
+
+  .delete-icon {
+    color: rgb(202, 48, 48);
+  }
 }
 
 /* Utilities Classes */

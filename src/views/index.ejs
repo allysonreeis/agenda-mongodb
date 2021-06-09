@@ -18,7 +18,7 @@
     <nav class="ag-navbar">
       <div class="ag-nav-home"><a href="/">Logo</a></div>
       
-      <a href="#">Agenda</a>
+      <a href="/">Agenda</a>
 
       <% if(user) { %> 
       <a href="/contato">Cadastrar Contato</a>
@@ -37,47 +37,28 @@
   </header>
   
   <div class="ag-container">
-    <div class="ag-cards">
-      <div class="ag-card-contact">
-        <div class="ag-id">1</div>
-        <div class="ag-name">Arthur</div>
-        <div class="ag-lastname">Leite</div>
-        <div class="ag-phone">+55 (11) 1111-2222</div>
-        <div class="ag-email">email@email.com</div>
-        <div class="ag-icons">
-          <span class="material-icons">edit</span>
-          <span class="material-icons">delete</span>
+    <% contacts.forEach((contact, index) => { %>
+    
+      <div class="ag-cards">
+        <div class="ag-card-contact">
+          <div class="ag-id"><%= index+1 %> </div>
+          <div class="ag-name"><%= contact.name %></div>
+          <div class="ag-lastname"><%= contact.lastname %></div>
+          <div class="ag-phone"><%= contact.email %></div>
+          <div class="ag-email"><%= contact.phone %></div>
+          <div class="ag-icons">
+            <a href="/contato/<%= contact._id %>">
+              <span class="material-icons edit-icon">edit</span>
+            </a>
+            <a href="/contato/delete/<%= contact._id %>">
+              <span class="material-icons delete-icon">delete</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="ag-cards">
-      <div class="ag-card-contact">
-        <div class="ag-id">1</div>
-        <div class="ag-name">Arthur</div>
-        <div class="ag-lastname">Leite</div>
-        <div class="ag-phone">+55 (11) 1111-2222</div>
-        <div class="ag-email">email@email.com</div>
-        <div class="ag-icons">
-          <span class="material-icons">edit</span>
-          <span class="material-icons">delete</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="ag-cards">
-      <div class="ag-card-contact">
-        <div class="ag-id">1</div>
-        <div class="ag-name">Arthur</div>
-        <div class="ag-lastname">Leite</div>
-        <div class="ag-phone">+55 (11) 1111-2222</div>
-        <div class="ag-email">email@email.com</div>
-        <div class="ag-icons">
-          <span class="material-icons">edit</span>
-          <span class="material-icons">delete</span>
-        </div>
-      </div>
-    </div>
+    <% }) %>  
+    
   </div>
   
 </body>
